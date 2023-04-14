@@ -1,5 +1,6 @@
 variable "iam_user_name_prefix" {
-	default = "my_iam_user"
+	type = string # supported: any, number, bool, list, map, set, object, tuple
+	# default = "my_iam_user" <- being defined in terraform.tfvars
 }
 
 resource "aws_iam_user" "my_iam_users" {
