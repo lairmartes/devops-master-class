@@ -1,0 +1,1 @@
+iam_names = ["lair","jussara","yuri","ariel"]
