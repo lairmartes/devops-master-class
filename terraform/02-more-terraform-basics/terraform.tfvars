@@ -1,1 +1,1 @@
-iam_user_name_prefix="iam_user_name"
+iam_user_name_prefix="my_iam_user"
