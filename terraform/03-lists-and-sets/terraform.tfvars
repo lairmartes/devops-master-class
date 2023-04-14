@@ -1,1 +1,1 @@
-iam_names = ["lair","jussara","yuri","ariel"]
+iam_names = ["lair","jussara","thais","felipe","yuri","ariel"]
