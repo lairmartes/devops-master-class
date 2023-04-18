@@ -14,7 +14,7 @@ data "aws_ami" "aws_linux_2_latest" {
     owners = ["amazon"]
     filter {
         name = "name"
-        values = ["amzn2-ami-hvm"]
+        values = ["amzn2-ami-hvm-*"]
     }
 }
 
