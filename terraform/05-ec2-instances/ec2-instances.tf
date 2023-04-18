@@ -17,7 +17,7 @@ resource "aws_instance" "http_server" {
         inline = [
             "sudo yum install httpd -y", # install http server
             "sudo service httpd start", # start http server
-            "echo Welcome to 1st Lair's EC2 instance - Virtual Server is at ${self.public_dns} | sudo tee /var/www/html/index.html" 
+            "echo Welcome to 1st Lair EC2 instance - Virtual Server is at ${self.public_dns} | sudo tee /var/www/html/index.html" 
               # ^ create html content and include in the file0
         ]
     
