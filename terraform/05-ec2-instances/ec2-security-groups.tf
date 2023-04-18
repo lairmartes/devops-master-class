@@ -2,7 +2,7 @@
 
 resource "aws_security_group" "http_server_sg" {
     name = "http_server_sg"
-    vpc_id = "vpc-087fe822880300f80"
+    vpc_id = "vpc-0c2c23d45e2ec766e"
 
     ingress {  
     
