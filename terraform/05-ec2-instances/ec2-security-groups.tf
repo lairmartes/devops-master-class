@@ -1,5 +1,9 @@
 # security group
 
+resource "aws_default_vpc" "default" {
+    
+}
+
 resource "aws_security_group" "http_server_sg" {
     name = "http_server_sg"
     vpc_id = "vpc-0c2c23d45e2ec766e"
