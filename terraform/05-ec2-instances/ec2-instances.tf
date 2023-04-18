@@ -5,6 +5,19 @@ data "aws_subnets" "default_subnets" {
     }
 }
 
+data "aws_ami_ids" "aws-linux-2-latest_ids" {
+    owners      = ["amazon"]
+}
+
+data "aws_ami" "aws-linux-2-latest" {
+    most_recent = true
+    owners = ["amazon"]
+    filter {
+        name = "name"
+        values ["amzn2-ami-hvm"]
+    }
+}
+
 resource "aws_instance" "http_server" {
     ami = "ami-069aabeee6f53e7bf"
     key_name = "default-ec2"
