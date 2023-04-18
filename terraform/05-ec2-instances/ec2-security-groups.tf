@@ -29,4 +29,8 @@ resource "aws_security_group" "http_server_sg" {
         protocol = -1 # all protocols
         cidr_blocks = ["0.0.0.0/0"]
     }
+
+    tags = {
+        name = "http_server_sg"
+    }
 }
