@@ -4,4 +4,22 @@ resource "aws_instance" "http_server" {
     instance_type = "t2.micro"
     vpc_security_group_ids = [aws_security_group.http_server_sg.id]
     subnet_id = "subnet-00455aaafc456df5a"
+
+    connection {
+
+        type = "ssh"
+        host = self.public_ip
+        user = "ec2-user"
+        private_key = file(var.aws_key_pair_file_name)
+    }
+
+    provisioner "remote-exec" {
+        inline = [
+            "sudo yum install httpd -y", # install http server
+            "sudo service httpd start", # start http server
+            "echo Welcome to 1st Lair's EC2 instance - Virtual Server is at ${self.public_dns} | sudo tee /var/www/html/index.html" 
+              # ^ create html content and include in the file0
+        ]
+    
+    }
 }
