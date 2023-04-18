@@ -5,11 +5,11 @@ data "aws_subnets" "default_subnets" {
     }
 }
 
-data "aws_ami_ids" "aws-linux-2-latest_ids" {
+data "aws_ami_ids" "aws_linux_2_latest_ids" {
     owners      = ["amazon"]
 }
 
-data "aws_ami" "aws-linux-2-latest" {
+data "aws_ami" "aws_linux_2_latest" {
     most_recent = true
     owners = ["amazon"]
     filter {
