@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "enterprise_backend_state" {
-    bucket = "dev/applications/backend-state/in28minutes-lair"
+    bucket = "dev-applications-backend-state-in28minutes-lair"
 
     lifecycle {
         prevent_destroy = true
