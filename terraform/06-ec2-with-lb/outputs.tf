@@ -3,7 +3,7 @@ output "aws_security_group_http_server_details" {
 }
 
 output "aws_instance_http_server_details" {
-    value = aws_instance.http_server.arn
+    value = aws_instance.http_servers.*.arn
 }
 
 output "http_servers_public_dns" {
